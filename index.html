@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <style>
+    body {
+      width: 100%;
+      height: 3000px;
+      margin: 0;
+    }
+
+    div {
+      display: flex;
+      margin: 30px 30px 50px 30px;
+    }
+
+    article {
+      margin-left: 50px;
+    }
+
+    button {
+      width: 100px;
+      height: 50px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    .art1 {
+      overflow-y : scroll;
+    }
+    .art1::-webkit-scrollbar{
+      width : 10px;
+    }
+    .art1::-webkit-scrollbar-track {
+      background-color: #d1cdf8;
+      border-radius: 100px;
+    }
+    .art1::-webkit-scrollbar-thumb {
+      background:#a197f8;
+      border-radius: 100px;
+
+    }
+
+  </style>
+
+  <script src="test.js" defer></script>
+
+</head>
+
+<body>
+  <div class ="todayTime" style = "margin : 10px; flex-direction: column; align-items: center;">
+    <p class = "_time"></p>
+  </div>
+  <div>
+    <div style="display : flex; flex-direction : column; margin : 0;">
+      <button class="btn1" style="margin-bottom : 10px;">랜덤버튼생성</button>
+      <button class="btn1-1">랜덤버튼삭제</button>
+    </div>
+    <article class="art1"></article>
+  </div>
+
+  <div>
+    <div style="display : flex; flex-direction : column; margin : 0;">
+      <button class="btn2" style="margin-bottom : 10px;">색상랜덤변경시작</button>
+      <button class="btn2_1">색상랜덤변경중지</button>
+    </div>
+    <article class="art2"> </article>
+  </div>
+
+  <div style = "position: fixed; right : 0; top : 20px; display: flex; align-items: center;">
+    <div style = "margin : 0;display: flex; flex-direction: column; justify-content: center;">
+    <button class="btn4" style  = "width : 100px; height : 50px; font-size : 12px;margin-bottom : 10px;">스크롤<br>시작</button>
+    <button class="btn4-1" style  = "width : 100px; height : 50px; font-size : 12px">스크롤<br>종료</button>
+    </div>
+    <article class="scrollData"> </article>
+  </div>
+</body>
+
+</html>
