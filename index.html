@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JS-test</JS-test></title>
+  <title>JS-test</JS-test>
+  </title>
   <script src="test.js" defer></script>
 
   <style>
@@ -29,29 +30,58 @@
       font-size: 13px;
       font-weight: bold;
     }
+
     .art1 {
-      overflow-y : scroll;
+      overflow-y: scroll;
     }
-    .art1::-webkit-scrollbar{
-      width : 10px;
+
+    .art1::-webkit-scrollbar {
+      width: 10px;
     }
+
     .art1::-webkit-scrollbar-track {
       background-color: #d1cdf8;
       border-radius: 100px;
     }
+
     .art1::-webkit-scrollbar-thumb {
-      background:#a197f8;
+      background: #a197f8;
       border-radius: 100px;
 
     }
 
+    .keyControl {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      margin: 0;
+    }
+
+    section {
+      width: 10vw;
+      height: 10vw;
+      font-size: 1.5vw;
+      line-height: 10vw;
+      text-align: center;
+      color: white;
+      background: black;
+      border-radius: 5vw;
+      transition: all .5s ease;
+
+
+    }
+
+    .pressed {
+      background: tomato;
+      transform: scale(1.1);
+    }
   </style>
 
 </head>
 
 <body>
-  <div class ="todayTime" style = "margin : 10px; flex-direction: column; align-items: center;">
-    <p class = "_time"></p>
+  <div class="todayTime" style="margin : 10px; flex-direction: column; align-items: center;">
+    <p class="_time"></p>
   </div>
   <div>
     <div style="display : flex; flex-direction : column; margin : 0;">
@@ -69,14 +99,21 @@
     <article class="art2"> </article>
   </div>
 
-  <div style = "position: fixed; right : 0; top : 50px; display: flex; align-items: center;">
-    <div style = "margin : 0;display: flex; flex-direction: column; justify-content: center;">
-    <button class="btn4" style  = "width : 100px; height : 50px; font-size : 12px;margin-bottom : 10px;">스크롤<br>시작</button>
-    <button class="btn4-1" style  = "width : 100px; height : 50px; font-size : 12px">스크롤<br>종료</button>
+  <div style="position: fixed; right : 0; top : 50px; display: flex; align-items: center;">
+    <div style="margin : 0;display: flex; flex-direction: column; justify-content: center;">
+      <button class="btn4"
+        style="width : 100px; height : 50px; font-size : 12px;margin-bottom : 10px;">스크롤<br>시작</button>
+      <button class="btn4-1" style="width : 100px; height : 50px; font-size : 12px">스크롤<br>종료</button>
     </div>
     <article class="scrollData"> </article>
   </div>
-  
+
+  <div class ="title" style ="width : 100%; display: flex; justify-content: center; margin : 0 0 2vw 0; font-size : 1vw; font-weight : bold">숫자를 누르세요</div>
+  <article class="keyControl">
+    <section id="1">1</section>
+    <section id="2">2</section>
+    <section id="3">3</section>
+  </article>
 </body>
 
 </html>

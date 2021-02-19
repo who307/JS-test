@@ -8,12 +8,13 @@
     let arrTime = [today, today.toLocaleDateString(), today.toLocaleTimeString(), today.toLocaleString()]
     let _time = document.querySelector("._time");
     _time.textContent = (arrTime[3]);
-  },1000)
+  }, 1000)
   // 인풋 버튼 타입 생성 & 삭제
   {
     let art1 = document.querySelector(".art1");
     art1.style = ("display : flex; flex-wrap : wrap; width : 620px; height : 200px;")
     let btn1 = document.querySelector(".btn1");
+
     btn1.addEventListener("click", function () {
       for (let i = 1; i <= 10; i++) {
         let ranNum = Math.ceil(Math.random() * 999);
@@ -78,23 +79,36 @@
   {
     // 스크롤 값 출력
     let click = false;
-    
+
     let scrollData = document.querySelector(".scrollData");
     scrollData.style = ("width : 100px; display : flex; flex-wrap : wrap; font-size : 40px; font-weight : bold;");
     document.addEventListener("scroll", function () {
       let _scroll = document.documentElement.scrollTop;
       scrollData.textContent = _scroll, " ";
-      if(click===false)
-      scrollData.textContent =  "0";
+      if (click === false)
+        scrollData.textContent = "0";
     })
     let btn4 = document.querySelector(".btn4");
     btn4.addEventListener("click", function () {
-      return click  = true;      
+      return click = true;
     })
     let btn4_1 = document.querySelector(".btn4-1");
     btn4_1.addEventListener("click", function () {
-      return click  = false;
-    })      
+      return click = false;
+    })
   }
-
 }
+
+
+
+window.addEventListener("keydown", (e) => {
+  let key = document.getElementById(e.key)
+  if (key) key.classList.add("pressed")
+  key.textContent = "누르는중"
+})
+
+window.addEventListener("keyup", (e) => {
+  let key = document.getElementById(e.key)
+  if (key) key.classList.remove("pressed")
+  key.textContent = e.key
+})
