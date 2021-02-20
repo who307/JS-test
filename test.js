@@ -99,16 +99,18 @@
   }
 }
 
-
-
 window.addEventListener("keydown", (e) => {
   let key = document.getElementById(e.key)
-  if (key) key.classList.add("pressed")
-  key.textContent = "누르는중"
+  if (key) {
+    key.classList.add("pressed")
+    key.textContent = "누르는중"
+  }
 })
 
 window.addEventListener("keyup", (e) => {
   let key = document.getElementById(e.key)
-  if (key) key.classList.remove("pressed")
-  key.textContent = e.key
+  if (key) {
+    key.classList.remove("pressed")
+    key.textContent = e.key
+  }
 })
