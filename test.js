@@ -124,12 +124,20 @@ document.querySelector(".targetTest").addEventListener("click", (e) => {
 
 
 let popup = document.querySelector(".popup");
-document.querySelector(".popArticle button").addEventListener("click", ()=>{
-  popup.style = ("display : flex");
+let btn = document.querySelector(".popArticle button")
+btn.addEventListener("click", ()=>{
+  popup.classList.toggle("show");
   document.body.style = ("overflow : hedden;")
+
+  if(btn.textContent === "모달열기"){
+    btn.textContent = "모달닫기"
+  }else{
+    btn.textContent = "모달열기"
+  }
 })
 // 닫기 이벤트
 document.querySelector(".close").addEventListener("click", ()=>{
-  popup.style = ("display : none");
+  popup.classList.remove("show")
+  btn.textContent = "모달열기"
   document.body.style = ("")
 })
