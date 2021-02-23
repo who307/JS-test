@@ -127,7 +127,7 @@ let popup = document.querySelector(".popup");
 let btn = document.querySelector(".popArticle button")
 btn.addEventListener("click", ()=>{
   popup.classList.toggle("show");
-  document.body.style = ("overflow : hedden;")
+  document.body.style = ("overflow : hidden;")
 
   if(btn.textContent === "모달열기"){
     btn.textContent = "모달닫기"
