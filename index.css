@@ -16,6 +16,9 @@
 .show {
   display : flex;
 }
+.scroll{
+  overflow: hidden;
+}
 .popup h1 {
   font-size: 2vw;
 }
