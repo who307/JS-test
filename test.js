@@ -114,3 +114,22 @@ window.addEventListener("keyup", (e) => {
     key.textContent = e.key
   }
 })
+// currentTarget과 target의 차이
+document.querySelector(".targetTest").addEventListener("click", (e) => {
+  console.log("선택자로 가져온 element 값의 자식요소 첫번째")
+  console.log(e.target)
+  console.log("선택자로 가져온 element 값의 요소 전체")
+  console.log(e.currentTarget)
+})
+
+
+let popup = document.querySelector(".popup");
+document.querySelector(".popArticle button").addEventListener("click", ()=>{
+  popup.style = ("display : flex");
+  document.body.style = ("overflow : hedden;")
+})
+// 닫기 이벤트
+document.querySelector(".close").addEventListener("click", ()=>{
+  popup.style = ("display : none");
+  document.body.style = ("")
+})
